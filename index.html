@@ -385,6 +385,13 @@ Remember — a happy kitten is an authenticated kitten!
 <li>Binding class (<em>MainActivityBinding</em>) will be generated based on the name of layout file (<em>main_activity.xml</em>).</li>
 </ul>
 
+<h2 id="custom-setter">Custom Setter</h2>
+<pre class="highlight xml"><code><span class="nt">&lt;ImageView</span> <span class="na">app:imageUrl=</span><span class="s">"Image_url"</span><span class="nt">&gt;</span>
+</code></pre><pre class="highlight java"><code><span class="nd">@BindingAdapter</span><span class="o">(</span><span class="s">"imageUrl"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setPaddingLeft</span><span class="o">(</span><span class="n">ImageView</span> <span class="n">view</span><span class="o">,</span> <span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Glide</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">view</span><span class="o">.</span><span class="na">getContext</span><span class="o">()).</span><span class="na">load</span><span class="o">(</span><span class="n">url</span><span class="o">).</span><span class="na">placehoder</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">loading</span><span class="o">).</span><span class="na">into</span><span class="o">(</span><span class="n">view</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
           <h1 id="library">Library</h1>
 
 <table><thead>
@@ -407,7 +414,7 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </tbody></table>
 
-          <h1 id="errors">Errors</h1>
+          <h1 id="network">Network</h1>
 
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
 
@@ -465,6 +472,46 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </tbody></table>
 
+          <h1 id="save-data">Save Data</h1>
+
+<h2 id="saving-key-value-sets">Saving Key-Value Sets</h2>
+
+<blockquote>
+<p>Initialization: </p>
+</blockquote>
+<pre class="highlight java"><code><span class="n">SharedPreferences</span> <span class="n">pref</span> <span class="o">=</span> <span class="n">getApplicationContext</span><span class="o">().</span><span class="na">getSharedPreferences</span><span class="o">(</span><span class="s">"MyPref"</span><span class="o">,</span> <span class="n">Context</span><span class="o">.</span><span class="na">MODE_PRIVATE</span><span class="o">);</span> <span class="c1">// 0 - for private mode</span>
+<span class="n">Editor</span> <span class="n">editor</span> <span class="o">=</span> <span class="n">pref</span><span class="o">.</span><span class="na">edit</span><span class="o">();</span>
+</code></pre>
+<blockquote>
+<p>Storing Data</p>
+</blockquote>
+<pre class="highlight java"><code><span class="n">editor</span><span class="o">.</span><span class="na">putBoolean</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span> <span class="c1">// Storing boolean - true/false</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">putString</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="s">"string value"</span><span class="o">);</span> <span class="c1">// Storing string</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">putInt</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="s">"int value"</span><span class="o">);</span> <span class="c1">// Storing integer</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">putFloat</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="s">"float value"</span><span class="o">);</span> <span class="c1">// Storing float</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">putLong</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="s">"long value"</span><span class="o">);</span> <span class="c1">// Storing long</span>
+
+<span class="n">editor</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span> <span class="c1">// commit changes</span>
+</code></pre>
+<blockquote>
+<p>Retrieving Data</p>
+</blockquote>
+<pre class="highlight java"><code><span class="n">pref</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">// getting String</span>
+<span class="n">pref</span><span class="o">.</span><span class="na">getInt</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">// getting Integer</span>
+<span class="n">pref</span><span class="o">.</span><span class="na">getFloat</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">// getting Float</span>
+<span class="n">pref</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">// getting Long</span>
+<span class="n">pref</span><span class="o">.</span><span class="na">getBoolean</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">// getting boolean</span>
+</code></pre>
+<blockquote>
+<p>Clearing or Deleting Data</p>
+</blockquote>
+<pre class="highlight java"><code><span class="n">editor</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span> <span class="c1">// will delete key name</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="s">"email"</span><span class="o">);</span> <span class="c1">// will delete key email</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span> <span class="c1">// commit changes</span>
+
+<span class="n">editor</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span> <span class="c1">// commit changes</span>
+</code></pre>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
