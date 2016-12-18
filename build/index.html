@@ -91,7 +91,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;Java&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;Shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -101,9 +101,7 @@
     <div class="tocify-wrapper">
       <img class="avatar" src="images/logo.png" alt="Logo" height="120" width="120" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="Java">Java</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="Shell">Shell</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -121,14 +119,6 @@
         <h1 id="sapuit">SapUIT</h1>
 
 <p>this is the first android cheatsheet !</p>
-
-<h1 id="introduction">Introduction</h1>
-
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&rsquo;s documentation.</p>
 
 <h1 id="authentication">Authentication</h1>
 
@@ -280,7 +270,151 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </tbody></table>
 
-          <h1 id="errors">Errors</h1>
+          <h1 id="data-binding">Data Binding</h1>
+
+<h2 id="build-environment">Build Environment</h2>
+
+<blockquote>
+<p>configure databinding in build.gradle :</p>
+</blockquote>
+<pre class="highlight gradle"><code><span class="n">android</span> <span class="o">{</span>
+    <span class="o">....</span>
+    <span class="n">dataBinding</span> <span class="o">{</span>
+        <span class="n">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<p>Reference :</p>
+
+<ul>
+<li><a href="https://developer.android.com/topic/libraries/data-binding/index.html#data_binding_layout_files">Data Binding Library</a>.</li>
+<li><a href="http://www.slideshare.net/fabio_collini/android-data-binding-in-action-using-mvvm-pattern-droidconuk">Data binding &amp; MVVM</a></li>
+</ul>
+
+<p>This document explains how to use the Data Binding Library to write declative layout and minimize the glue code necessary to bind your app logic and layouts.</p>
+
+<h2 id="data-binding-layout-files">Data Binding Layout Files</h2>
+
+<blockquote>
+<p>data binding layout main.xml :</p>
+</blockquote>
+<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;layout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;data&gt;</span>
+      <span class="nt">&lt;variable</span> <span class="na">name=</span><span class="s">"user"</span> <span class="na">type=</span><span class="s">"com.example.User"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;import</span> <span class="na">type=</span><span class="s">"android.view.View"</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/data&gt;</span>
+   <span class="nt">&lt;LinearLayout</span>
+       <span class="na">android:orientation=</span><span class="s">"vertical"</span>
+       <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+       <span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;TextView</span> <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+           <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+           <span class="na">android:text=</span><span class="s">"@{user.firstName}"</span>
+           <span class="na">android:visibility=</span><span class="s">"@{user.isAdult ? View.VISIBLE : View.GONE}"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;TextView</span> <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+           <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+           <span class="na">android:text=</span><span class="s">"@{user.lastName}"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;TextView</span> <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+           <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+           <span class="na">android:text=</span><span class="s">"@{Integer.toString(user.age)}"</span><span class="nt">/&gt;</span>
+
+   <span class="nt">&lt;/LinearLayout&gt;</span>
+<span class="nt">&lt;/layout&gt;</span>
+</code></pre>
+<ul>
+<li>Start with a root tag of <strong>layout</strong>.</li>
+<li>Followed by <strong>data</strong> element &amp; <strong>view</strong> root element.</li>
+<li>The user <strong>variable</strong> describes a property.</li>
+<li>The attribute properties using the &ldquo;<strong>@{}</strong>&rdquo;.</li>
+<li>Zero or more <strong>import</strong> elements may be used inside the data element.</li>
+</ul>
+
+<h2 id="data-object">Data Object</h2>
+
+<blockquote>
+<p>Java object (POJO) for User : </p>
+</blockquote>
+<pre class="highlight java"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">User</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">firstName</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">lastName</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">adult</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nf">User</span><span class="o">(</span><span class="n">String</span> <span class="n">firstName</span><span class="o">,</span> <span class="n">String</span> <span class="n">lastName</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">firstName</span> <span class="o">=</span> <span class="n">firstName</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">lastName</span> <span class="o">=</span> <span class="n">lastName</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">getFirstName</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">firstName</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">getLastName</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">lastName</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">age</span><span class="o">;</span>
+  <span class="o">}</span> 
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isAdult</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">adult</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<p>The expression <em>@{user.firstName}</em> use for TextView&rsquo;s <em>android:text</em> attribute. </p>
+
+<h2 id="binding-data">Binding Data</h2>
+
+<blockquote>
+<p>MainActivity.java :</p>
+</blockquote>
+<pre class="highlight java"><code><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+  <span class="n">MainActivityBinding</span> <span class="n">binding</span> <span class="o">=</span> <span class="n">DataBindingUtil</span><span class="o">.</span><span class="na">setContentView</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">main_activity</span><span class="o">);</span>
+  <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">User</span><span class="o">(</span><span class="s">"Sap"</span><span class="o">,</span> <span class="s">"Nguyen"</span><span class="o">,</span> <span class="s">"21"</span><span class="o">);</span>
+  <span class="n">binding</span><span class="o">.</span><span class="na">setUser</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Using data binding items inside a ListView or RecyclerView adapter :</p>
+</blockquote>
+<pre class="highlight java"><code><span class="n">ListItemBinding</span> <span class="n">binding</span> <span class="o">=</span> <span class="n">ListItemBinding</span><span class="o">.</span><span class="na">inflate</span><span class="o">(</span><span class="n">layoutInflater</span><span class="o">,</span> <span class="n">viewGroup</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+<span class="c1">//or</span>
+<span class="n">ListItemBinding</span> <span class="n">binding</span> <span class="o">=</span> <span class="n">DataBindingUtil</span><span class="o">.</span><span class="na">inflate</span><span class="o">(</span><span class="n">layoutInflater</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">list_item</span><span class="o">,</span> <span class="n">viewGroup</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+</code></pre>
+<ul>
+<li>Binding class (<em>MainActivityBinding</em>) will be generated based on the name of layout file (<em>main_activity.xml</em>).</li>
+</ul>
+
+<h2 id="custom-setter">Custom Setter</h2>
+<pre class="highlight xml"><code><span class="nt">&lt;ImageView</span> <span class="na">app:imageUrl=</span><span class="s">"Image_url"</span><span class="nt">&gt;</span>
+</code></pre><pre class="highlight java"><code><span class="nd">@BindingAdapter</span><span class="o">(</span><span class="s">"imageUrl"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setPaddingLeft</span><span class="o">(</span><span class="n">ImageView</span> <span class="n">view</span><span class="o">,</span> <span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Glide</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">view</span><span class="o">.</span><span class="na">getContext</span><span class="o">()).</span><span class="na">load</span><span class="o">(</span><span class="n">url</span><span class="o">).</span><span class="na">placehoder</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">loading</span><span class="o">).</span><span class="na">into</span><span class="o">(</span><span class="n">view</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+          <h1 id="library">Library</h1>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Describe</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="http://jakewharton.github.io/butterknife/">butterknife</a></td>
+<td>Bind Android views and callbacks to field and method.</td>
+</tr>
+<tr>
+<td><a href="http://socket.io/blog/native-socket-io-and-android/">socket.io</a></td>
+<td>Communicaties with a socket.io nodejs server.</td>
+</tr>
+<tr>
+<td><a href="http://www.androiddesignpatterns.com/2016/11/introduction-to-icon-animation-techniques.html">animation</a></td>
+<td>Icon Animation Techniques.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="network">Network</h1>
 
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
 
@@ -338,12 +472,50 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </tbody></table>
 
+          <h1 id="save-data">Save Data</h1>
+
+<h2 id="saving-key-value-sets">Saving Key-Value Sets</h2>
+
+<blockquote>
+<p>Initialization: </p>
+</blockquote>
+<pre class="highlight java"><code><span class="n">SharedPreferences</span> <span class="n">pref</span> <span class="o">=</span> <span class="n">getApplicationContext</span><span class="o">().</span><span class="na">getSharedPreferences</span><span class="o">(</span><span class="s">"MyPref"</span><span class="o">,</span> <span class="n">Context</span><span class="o">.</span><span class="na">MODE_PRIVATE</span><span class="o">);</span> <span class="c1">// 0 - for private mode</span>
+<span class="n">Editor</span> <span class="n">editor</span> <span class="o">=</span> <span class="n">pref</span><span class="o">.</span><span class="na">edit</span><span class="o">();</span>
+</code></pre>
+<blockquote>
+<p>Storing Data</p>
+</blockquote>
+<pre class="highlight java"><code><span class="n">editor</span><span class="o">.</span><span class="na">putBoolean</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span> <span class="c1">// Storing boolean - true/false</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">putString</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="s">"string value"</span><span class="o">);</span> <span class="c1">// Storing string</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">putInt</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="s">"int value"</span><span class="o">);</span> <span class="c1">// Storing integer</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">putFloat</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="s">"float value"</span><span class="o">);</span> <span class="c1">// Storing float</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">putLong</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="s">"long value"</span><span class="o">);</span> <span class="c1">// Storing long</span>
+
+<span class="n">editor</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span> <span class="c1">// commit changes</span>
+</code></pre>
+<blockquote>
+<p>Retrieving Data</p>
+</blockquote>
+<pre class="highlight java"><code><span class="n">pref</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">// getting String</span>
+<span class="n">pref</span><span class="o">.</span><span class="na">getInt</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">// getting Integer</span>
+<span class="n">pref</span><span class="o">.</span><span class="na">getFloat</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">// getting Float</span>
+<span class="n">pref</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">// getting Long</span>
+<span class="n">pref</span><span class="o">.</span><span class="na">getBoolean</span><span class="o">(</span><span class="s">"key_name"</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">// getting boolean</span>
+</code></pre>
+<blockquote>
+<p>Clearing or Deleting Data</p>
+</blockquote>
+<pre class="highlight java"><code><span class="n">editor</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span> <span class="c1">// will delete key name</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="s">"email"</span><span class="o">);</span> <span class="c1">// will delete key email</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span> <span class="c1">// commit changes</span>
+
+<span class="n">editor</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+<span class="n">editor</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span> <span class="c1">// commit changes</span>
+</code></pre>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="Java">Java</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="Shell">Shell</a>
           </div>
       </div>
     </div>
