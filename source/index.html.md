@@ -9,9 +9,10 @@ toc_footers:
 
 includes:
   - databinding
-  - library
   - network
   - savedata
+  - tutorial
+  - library
 
 search: true
 ---
