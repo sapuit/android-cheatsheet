@@ -29,6 +29,13 @@ pref.getInt("key_name", null); // getting Integer
 pref.getFloat("key_name", null); // getting Float
 pref.getLong("key_name", null); // getting Long
 pref.getBoolean("key_name", null); // getting boolean
+pref.getAll();
+```
+
+> update value
+
+```java
+editor.putString(KEY, VALUE).apply();
 ```
 
 > Clearing or Deleting Data

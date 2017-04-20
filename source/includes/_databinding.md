@@ -1,4 +1,5 @@
-# Data Binding 
+Data Binding 
+============
 
 ## Build Environment
 
@@ -12,11 +13,6 @@ android {
     }
 }
 ```
-
-Reference :
-
-- [Data Binding Library](https://developer.android.com/topic/libraries/data-binding/index.html#data_binding_layout_files).
-- [Data binding & MVVM](http://www.slideshare.net/fabio_collini/android-data-binding-in-action-using-mvvm-pattern-droidconuk)
 
 This document explains how to use the Data Binding Library to write declative layout and minimize the glue code necessary to bind your app logic and layouts.
 
@@ -122,3 +118,8 @@ public static void setPaddingLeft(ImageView view, String url) {
     Glide.with(view.getContext()).load(url).placehoder(R.drawable.loading).into(view);
 }
 ```
+
+Reference :
+
+- [Data Binding Library](https://developer.android.com/topic/libraries/data-binding/index.html#data_binding_layout_files).
+- [Data binding & MVVM](http://www.slideshare.net/fabio_collini/android-data-binding-in-action-using-mvvm-pattern-droidconuk)

@@ -2,6 +2,7 @@
 
 Name | Describe	
 ---- | --------
+[awesome-android](https://github.com/JStumpp/awesome-android) | A curated list of awesome Android packages and resources.
 [butterknife](http://jakewharton.github.io/butterknife/) | Bind Android views and callbacks to field and method.
 [socket.io](http://socket.io/blog/native-socket-io-and-android/) | Communicaties with a socket.io nodejs server.
 [animation](http://www.androiddesignpatterns.com/2016/11/introduction-to-icon-animation-techniques.html) | Icon Animation Techniques.
@@ -12,3 +13,5 @@ Name | Describe
 [NDK](https://www.androidsecurity.info/2016/12/15/storing-your-secure-information-in-the-ndk/) | Storing your secure information in the NDK
 [Google Sign-In](https://medium.com/@p.tournaris/android-improving-sign-in-experience-with-google-sign-in-and-smartlock-f0bfd789602a#.wkbjpmpdo) | Example google sign in.
 [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) | Make icon
+[Material Stepper](https://github.com/stepstone-tech/android-material-stepper) | This library allows to use Material steppers inside Android applications.
+[Android-Iconics](https://github.com/mikepenz/Android-Iconics) |  Use any icon font, or vector (.svg) as drawable in your application
