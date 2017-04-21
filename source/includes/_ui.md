@@ -1,8 +1,6 @@
 # GUI
 
-## Background
-
-### Moving Gradient Background
+## Gradient Background Animation
 
 > main
 
@@ -137,3 +135,52 @@ animationDrawable.start();
 Reference :
 - [Make a moving Gradient Background in Android](http://thetechnocafe.com/make-a-moving-gradient-background-in-android/)
 - Gradient combinations : [UiGradients](https://uigradients.com/#Kyoto)
+
+## StatusBar transparent
+
+> Make the status bar traslucent
+
+```xml
+<style name="AppTheme" parent="AppTheme.Base">
+    <item name="android:windowTranslucentStatus">true</item>
+</style>
+```
+
+>  A method to find height of the status bar
+
+```java
+public int getStatusBarHeight() {
+    int result = 0;
+    int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+    if (resourceId > 0) 
+        result = getResources().getDimensionPixelSize(resourceId);
+    return result;
+}
+```
+> MainActivity
+
+```java
+Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+setSupportActionBar(toolbar);
+
+toolbar.setPadding(0, getStatusBarHeight(), 0, 0);
+
+// create our manager instance after the content view is set
+SystemBarTintManager tintManager = new SystemBarTintManager(this);
+// enable status bar tint
+tintManager.setStatusBarTintEnabled(true);
+// enable navigation bar tint
+tintManager.setNavigationBarTintEnabled(true);
+// set the transparent color of the status bar, 20% darker
+tintManager.setTintColor(Color.parseColor("#20000000"));
+``` 
+
+```xml
+compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+```
+
+## Rounded image
+
+Reference: [Android Rounded Image](https://gist.github.com/melanke/7158342)
+
+

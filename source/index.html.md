@@ -9,7 +9,7 @@ toc_footers:
 
 includes:
   - setup
-  - gui
+  - ui
   - databinding
   - network
   - savedata
