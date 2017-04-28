@@ -8,13 +8,14 @@ toc_footers:
   - <a href='https://www.facebook.com/nkpit'>Facebook</a>
 
 includes:
-  - setup
+  - codesniper
+  - camera
   - ui
   - databinding
   - network
   - savedata
-  - codesniper
   - library
+  - setup
   - test
 
 search: true
