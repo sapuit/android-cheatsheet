@@ -9,7 +9,6 @@ toc_footers:
 
 includes:
   - codesniper
-  - camera
   - ui
   - databinding
   - network
