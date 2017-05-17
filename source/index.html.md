@@ -8,7 +8,7 @@ toc_footers:
   - <a href='https://www.facebook.com/nkpit'>Facebook</a>
 
 includes:
-  - codesniper
+  - features
   - ui
   - databinding
   - network

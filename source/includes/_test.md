@@ -8,6 +8,8 @@ Resource:
 - [Unit tests with Mockito - Tutorial](http://www.vogella.com/tutorials/Mockito/article.html)
 - [Building Effective Unit Tests](https://developer.android.com/training/testing/unit-testing/index.html)
 - [Testing UI for a Single App](https://developer.android.com/training/testing/ui-testing/espresso-testing.html)
+- [](http://alexzh.com/tutorials/android-testing-unit-testing/)
+- [Mockito and Robolectric (part 2)](http://alexzh.com/tutorials/android-testing-mockito-robolectric/)
 
 ## Debug 
 

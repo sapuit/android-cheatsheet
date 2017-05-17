@@ -1,5 +1,11 @@
 # GUI
 
+* [Gradient Background Animation](#gradient-background-animation)
+* [StatusBar transparent](#statusbar-transparent)
+* [Rounded image](#rounded-image)
+* []()
+* []()
+
 ## Gradient Background Animation
 
 > main

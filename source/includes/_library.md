@@ -5,6 +5,7 @@
 Name | Describe	
 ---- | --------
 [awesome-android](https://github.com/JStumpp/awesome-android) | A curated list of awesome Android packages and resources.
+[CodePath Android](https://guides.codepath.com/android) | Android guides for everyone
 [butterknife](http://jakewharton.github.io/butterknife/) | Bind Android views and callbacks to field and method.
 [android thing](https://github.com/amitshekhariitbhu/awesome-android-things) | A curated list of awesome android things tutorials, libraries and much more at one place
 [fileProvider](https://blog.stylingandroid.com/fileprovider/) | share content to another app.
@@ -20,12 +21,12 @@ Name | Describe
 
 Name | Describe	
 ---- | --------
+[https://github.com/lightSky/Awesome-MaterialDesign](https://github.com/lightSky/Awesome-MaterialDesign) | Collection of material design libs and res.
 [Android-Iconics](https://github.com/mikepenz/Android-Iconics) |  Use any icon font, or vector (.svg) as drawable in your application
 [Material Stepper](https://github.com/stepstone-tech/android-material-stepper) | This library allows to use Material steppers inside Android applications.
 [Material Drawer](https://github.com/mikepenz/MaterialDrawer) | The flexible, easy to use, all in one drawer library for your Android project
 [animation](http://www.androiddesignpatterns.com/2016/11/introduction-to-icon-animation-techniques.html) | Icon Animation Techniques.
 [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) | Make icon
-
 
 ## Networking
 
@@ -43,3 +44,15 @@ Name | Describe
 [File templates](https://coderwall.com/p/fsxvyw/file-templates-in-android-studio) | File Templates in Android Studio
 [Android ADT Template Format Document](http://www.i-programmer.info/professional-programmer/resources-and-tools/6845-android-adt-template-format-document.html) |  Describes the format and syntax for Android code templates.
 [live-templates](https://github.com/keyboardsurfer/idea-live-templates) | A collection of useful live templates that you can use within your AndroidStudio or IntelliJ IDEA installation.
+[Custom Android Code Templates](https://robusttechhouse.com/tutorial-how-to-create-custom-android-code-templates/) | Tutorial How To Create Custom Android Code Templates
+
+## Inspiration
+
+Name | Describe	
+---- | --------
+[UI-Oh-My](http://uiohmy.com/) | Great resource for seeing screenshots of apps
+[inspired-ui]() | Endless list of beautiful UI design
+[mobilepatterns](https://www.mobile-patterns.com/android) | Common screen patterns neatly organized
+[pttrns](http://pttrns.com/android-patterns) | List of android screens in categories
+[androidniceties](http://androidniceties.tumblr.com/) | Blog of beautiful interfaces
+[androidux ](http://androidux.com/) | Explores common patterns for UX
