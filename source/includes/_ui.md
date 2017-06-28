@@ -3,8 +3,25 @@
 * [Gradient Background Animation](#gradient-background-animation)
 * [StatusBar transparent](#statusbar-transparent)
 * [Rounded image](#rounded-image)
-* []()
-* []()
+
+## Different values folder for different screens
+
+
+---- | -------- | ----- | -----
+values-sw720dp |10.1” | tablet | 1280x800 mdpi
+values-sw600dp | 7.0”  | tablet | 1024x600 mdpi
+values-sw480dp | 5.4”  | 480x854 | mdpi 
+values-sw480dp | 5.1”  | 480x800 | mdpi 
+values-xxhdpi| 5.5"  | 1080x1920 | xxhdpi
+values-xxhdpi| 5.5"  | 1440x2560 | xxhdpi
+values-xhdpi | 4.7”   | 1280x720 | xhdpi 
+values-xhdpi | 4.65”  | 720x1280 | xhdpi 
+values-hdpi | 4.0” | 480x800 | hdpi
+values-hdpi | 3.7” | 480x854 | hdpi
+values-mdpi | 3.2” | 320x480 | mdpi
+values-ldpi | 3.4” | 240x432 | ldpi
+values-ldpi | 3.3” | 240x400 | ldpi
+values-ldpi | 2.7” | 240x320 | ldpi
 
 ## Gradient Background Animation
 
@@ -12,12 +29,9 @@
 
 ```java
 LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
-
 AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
-
 animationDrawable.setEnterFadeDuration(2500);
 animationDrawable.setExitFadeDuration(5000);
-
 animationDrawable.start();
 ```
 
@@ -84,6 +98,7 @@ animationDrawable.start();
 ```
 
 > gradient_red.xml
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
@@ -112,6 +127,7 @@ animationDrawable.start();
 </shape>
 ```
 > gradient_purple.xml
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
@@ -181,12 +197,10 @@ tintManager.setNavigationBarTintEnabled(true);
 tintManager.setTintColor(Color.parseColor("#20000000"));
 ``` 
 
+> build.gradle
+
 ```xml
 compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
 ```
-
-## Rounded image
-
-Reference: [Android Rounded Image](https://gist.github.com/melanke/7158342)
 
 
