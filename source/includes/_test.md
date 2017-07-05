@@ -10,6 +10,7 @@ Resource:
 - [Testing UI for a Single App](https://developer.android.com/training/testing/ui-testing/espresso-testing.html)
 - [Android testing: Unit testing ](http://alexzh.com/tutorials/android-testing-unit-testing/)
 - [Mockito and Robolectric (part 2)](http://alexzh.com/tutorials/android-testing-mockito-robolectric/)
+- [Reactive Android Instrumentation Test Runner](https://github.com/gojuno/composer)
 
 ## Debug 
 
