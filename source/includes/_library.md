@@ -45,7 +45,8 @@
 | [RecyclerView in Kotlin](https://antonioleiva.com/recyclerview-adapter-kotlin/) | Writing a RecyclerView Adapter in Kotlin . |
 | [Kotlin talk from Google I/O 2017](https://www.youtube.com/watch?v=fPzxfeDJDzY) | Life is Great and Everything Will Be Ok, Kotlin is Here |
 | [Using Mockito with Kotlin](http://trickyandroid.com/using-mockito-with-kotlin/) | Using Mockito with Kotlin |
-
+|[Design Patterns](https://github.com/dbacinski/Design-Patterns-In-Kotlin)|Design Patterns implemented in Kotlin |
+    
 ## Media
 
 | Name | Describe |
@@ -86,9 +87,10 @@
 
 | Name | Describe |
 | - | - |
+|[awesome Android UI/UX libraries](https://github.com/wasabeef/awesome-android-ui)|awesome Android UI/UX libraries|
 | [Supporting Multiple Screens](https://developer.android.com/guide/practices/screens_support.html) | Supporting Multiple Screens |
 | [Different values folder](https://stackoverflow.com/questions/32860815/how-to-define-dimens-xml-for-every-different-screen-size-in-android) | Different values folder for different screens |
-| [https://github.com/lightSky/Awesome-MaterialDesign](https://github.com/lightSky/Awesome-MaterialDesign) | Collection of material design libs and res. |
+| [Awesome-MaterialDesign](https://github.com/lightSky/Awesome-MaterialDesign)| Collection of material design libs and res. |
 | [Android-Iconics](https://github.com/mikepenz/Android-Iconics) | Use any icon font, or vector (.svg) as drawable in your application |
 | [Material Stepper](https://github.com/stepstone-tech/android-material-stepper) | This library allows to use Material steppers inside Android applications. |
 | [Material Drawer](https://github.com/mikepenz/MaterialDrawer) | The flexible, easy to use, all in one drawer library for your Android project |
@@ -97,14 +99,16 @@
 | [Android Rounded Image](https://gist.github.com/melanke/7158342) | Rounded image |
 | [Fonts (revisited)](https://blog.stylingandroid.com/fonts-revisited/) | this article we’ll take a look at what has changed since the original series. |
 | [Alerter](https://github.com/Tapadoo/Alerter) | An Android Alerting Library ![Default Alert](https://github.com/Tapadoo/Alerter/raw/master/documentation/alert_default.gif) |
-| [Grav](https://github.com/glomadrian/Grav) | Configurable animations based on points ![Grav](https://github.com/glomadrian/Grav/raw/master/art/login.gif) |
+| [Grav](https://github.com/glomadrian/Grav) | Configurable animations based on points <img src="https://github.com/glomadrian/Grav/raw/master/art/login.gif" alt="Slate: API Documentation Generator" width="150"/> |
 | [Downloadable Fonts](https://blog.stylingandroid.com/downloadable-fonts/) | Downloadable Fonts |
-| [Material Calendar View for Android](https://github.com/Applandeo/Material-Calendar-View) | Material Calendar View for Android |
+| [Material Calendar View for Android](https://github.com/Applandeo/Material-Calendar-View) | Material Calendar View for Android <img src="https://cloud.githubusercontent.com/assets/2614225/26538163/e40730cc-4444-11e7-897d-ca45d7289a0f.png" width="200"/>|
+|[Spotlight](https://github.com/TakuSemba/Spotlight)| lights items for tutorials or walk-throughs <img src="https://github.com/TakuSemba/Spotlight/raw/master/arts/customTarget.gif" width="200"/> | 
 
 ## Other
 
 | Name | Describe |
 | - | - |
+| [30+ Kickass Tools to Develop Android Apps Like a Pro](https://blog.aritraroy.in/30-kickass-tools-to-develop-android-apps-like-a-pro-191e52b9419b)|Best tools to improve your development productivity and build better Android apps|
 | [awesome-android](https://github.com/JStumpp/awesome-android) | A curated list of awesome Android packages and resources. |
 | [CodePath Android](https://guides.codepath.com/android) | Android guides for everyone |
 | [butterknife](http://jakewharton.github.io/butterknife/) | Bind Android views and callbacks to field and method. |

@@ -1,7 +1,56 @@
 # Code sniper
 
+* [FolderHelper](#folderhelper)
 * [Activity for result](#activity-for-result)
 * [Android Login and Registration](#)
+* [Clear Activity Stack](#clear-activity-stack)
+
+
+## FolderHelper
+
+```kotlin
+val ROOT_FOLDER = Environment.getExternalStorageDirectory().absolutePath + File.separator + GlobalParams.APP_NAME + File.separator
+val PHOTO_FOLDER = ROOT_FOLDER + "photo" + File.separator
+val QRCODE_FOLDER = ROOT_FOLDER + "qrcode" + File.separator
+
+private val TAG = this::class.java.simpleName
+private val isDebug = false
+private fun log(msg: String) {
+    if (isDebug) log(msg)
+}
+
+fun creatAppFolder() {
+    try {
+        createFolder(ROOT_FOLDER)
+        createFolder(PHOTO_FOLDER)
+        createFolder(QRCODE_FOLDER)
+
+    } catch (e: Exception) {
+        e.printStackTrace()
+        //toast(getString(R.string.not_create_app_folder))
+    }
+}
+
+private fun createFolder(pathFolder: String){
+    val folder = File(pathFolder)
+    if (!folder.exists()) {
+        folder.mkdirs()
+        log("Create ${folder.absolutePath} successfully")
+
+        val nomedia = File(QRCODE_FOLDER + ".nomedia")
+        if (!nomedia.exists()) {
+            try {
+                nomedia.createNewFile()
+                log("Create ${nomedia.path} successfully")
+            } catch (e: IOException) {
+                log("Create ${nomedia.path} fail")
+                e.printStackTrace()
+            }
+        }
+    }
+}
+```
+
 
 ## Activity for result
     
@@ -100,5 +149,11 @@ public class SessionManager {
 ```
 
 ## Android Login and Registration
+
+## Clear Activity Stack
+
+```java
+ intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+```
 
 

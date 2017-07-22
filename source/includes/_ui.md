@@ -1,27 +1,28 @@
-# GUI
+# GUI Code sniper
 
 * [Gradient Background Animation](#gradient-background-animation)
 * [StatusBar transparent](#statusbar-transparent)
 * [Rounded image](#rounded-image)
+* [Hide the status bar](#hide-the-status-bar)
 
 ## Different values folder for different screens
 
-
----- | -------- | ----- | -----
-values-sw720dp |10.1” | tablet | 1280x800 mdpi
-values-sw600dp | 7.0”  | tablet | 1024x600 mdpi
-values-sw480dp | 5.4”  | 480x854 | mdpi 
-values-sw480dp | 5.1”  | 480x800 | mdpi 
-values-xxhdpi| 5.5"  | 1080x1920 | xxhdpi
-values-xxhdpi| 5.5"  | 1440x2560 | xxhdpi
-values-xhdpi | 4.7”   | 1280x720 | xhdpi 
-values-xhdpi | 4.65”  | 720x1280 | xhdpi 
-values-hdpi | 4.0” | 480x800 | hdpi
-values-hdpi | 3.7” | 480x854 | hdpi
-values-mdpi | 3.2” | 320x480 | mdpi
-values-ldpi | 3.4” | 240x432 | ldpi
-values-ldpi | 3.3” | 240x400 | ldpi
-values-ldpi | 2.7” | 240x320 | ldpi
+Folder |Screen size (inch)|Screen size |Qualifier
+- | - | - | -
+values-sw720dp |10.1” | tablet | 1280x800 mdpi|
+values-sw600dp | 7.0”  | tablet | 1024x600 mdpi|
+values-sw480dp | 5.4”  | 480x854 | mdpi |
+values-sw480dp | 5.1”  | 480x800 | mdpi |
+values-xxhdpi| 5.5"  | 1080x1920 | xxhdpi|
+values-xxhdpi| 5.5"  | 1440x2560 | xxhdpi|
+values-xhdpi | 4.7”   | 1280x720 | xhdpi |
+values-xhdpi | 4.65”  | 720x1280 | xhdpi |
+values-hdpi | 4.0” | 480x800 | hdpi|
+values-hdpi | 3.7” | 480x854 | hdpi|
+values-mdpi | 3.2” | 320x480 | mdpi|
+values-ldpi | 3.4” | 240x432 | ldpi|
+values-ldpi | 3.3” | 240x400 | ldpi|
+|values-ldpi | 2.7” | 240x320 | ldpi
 
 ## Gradient Background Animation
 
@@ -203,4 +204,21 @@ tintManager.setTintColor(Color.parseColor("#20000000"));
 compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
 ```
 
+## Hide the status bar
 
+```java
+// Hide the Status Bar on Android 4.0 and Lower
+if (Build.VERSION.SDK_INT < 16) {
+    window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN);
+}
+
+setContentView(R.layout.activity_home)
+
+// Hide the status bar on android > 4.0.
+val decorView = window.decorView
+val uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN
+decorView.systemUiVisibility = uiOptions
+
+setSupportActionBar(toolbar)
+```

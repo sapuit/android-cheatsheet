@@ -8,6 +8,7 @@ toc_footers:
   - <a href='https://www.facebook.com/nkpit'>Facebook</a>
 
 includes:
+  - blog
   - features
   - ui
   - databinding
