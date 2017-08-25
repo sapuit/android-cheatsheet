@@ -12,11 +12,13 @@ includes:
   - features
   - ui
   - databinding
+  - database
   - network
   - savedata
   - library
   - setup
   - test
+  - location
 
 search: true
 ---

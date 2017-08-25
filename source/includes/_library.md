@@ -118,3 +118,4 @@
 | [Google Sign-In](https://medium.com/@p.tournaris/android-improving-sign-in-experience-with-google-sign-in-and-smartlock-f0bfd789602a#.wkbjpmpdo) | Example google sign in.|
 | [Memory Leak Patterns in Android](https://android.jlelse.eu/memory-leak-patterns-in-android-4741a7fcb570) | How to fix/avoid memory leak?
 | [Android Architecture Components](https://android.jlelse.eu/introduction-to-android-architecture-components-22b8c84f0b9d) | Series of articles exploring the components, understanding the purpose, how to use and little bit of working internals of them
+|[30+ Bite-Sized Pro Tips to Become a Better Android Developer](https://blog.aritraroy.in/30-bite-sized-pro-tips-to-become-a-better-android-developer-b311fd641089)|some bite-sized pro tips from my experience to aid you in the journey|
