@@ -67,6 +67,7 @@
 | Name | Describe |
 | - | - |
 | [Karchitec](https://github.com/msesma/Karchitec) | Kotlin RSS reader using Google android architecture components libraries |
+|[The Google I/O 2017 Android App](https://github.com/google/iosched)|This project is the Android app for the conference. The app supports devices running Android 5.0+, and is optimized for phones and tablets of all shapes and sizes.|
 
 ## Plugin
 
@@ -127,3 +128,5 @@
 | [Memory Leak Patterns in Android](https://android.jlelse.eu/memory-leak-patterns-in-android-4741a7fcb570) | How to fix/avoid memory leak?
 | [Android Architecture Components](https://android.jlelse.eu/introduction-to-android-architecture-components-22b8c84f0b9d) | Series of articles exploring the components, understanding the purpose, how to use and little bit of working internals of them
 |[30+ Bite-Sized Pro Tips to Become a Better Android Developer](https://blog.aritraroy.in/30-bite-sized-pro-tips-to-become-a-better-android-developer-b311fd641089)|some bite-sized pro tips from my experience to aid you in the journey|
+|[Android Development Best Practices](https://blog.mindorks.com/android-development-best-practices-83c94b027fd3)|Let’s explore some best practices in designing and developing Android apps.|
+|[Context In Android Application](https://blog.mindorks.com/understanding-context-in-android-application-330913e32514)|Understanding Context In Android Application|
