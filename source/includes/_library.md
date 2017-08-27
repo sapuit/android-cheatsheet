@@ -6,6 +6,7 @@
 * [Media](#media)
 * [Networking](#networking)
 * [Project](#project)
+* [Plugin](#plugin)
 * [RxJava](#rxJava)
 * [Templates](#templates)
 * [UI](#ui)
@@ -66,6 +67,13 @@
 | Name | Describe |
 | - | - |
 | [Karchitec](https://github.com/msesma/Karchitec) | Kotlin RSS reader using Google android architecture components libraries |
+
+## Plugin
+
+| Name | Describe |
+| - | - |
+| [Android-Studio-Plugins](https://github.com/balsikandar/Android-Studio-Plugins) | This is a list of all awesome and useful android studio plugins.|
+
 
 ## RxJava
 
