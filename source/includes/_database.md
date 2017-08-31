@@ -25,7 +25,6 @@ annotationProcessor "android.arch.persistence.room:compiler:1.0.0-alpha3"
 > AppDatabase.kt
 
 ```javascript
-
 // debug
 // adb forward tcp:8080 tcp:8080
 
@@ -69,10 +68,18 @@ class User(
         @ColumnInfo(name = "name")
         var name: String = "",
         
+        @ColumnInfo(name = "age")
+        var age: Int = "",
+
+        @Embedded
+        var address: Address,
+
         @Ignore
         var  picture: Bitmap
                 )
 
+data class Address(val postcode: String,
+                   val addressLine1: String)
 ```
 
 > Book.kt
@@ -95,8 +102,8 @@ class Book {
 > UserDao.kt
 
 ```java
-@Dao
-interface UserDao  {
+    @Dao
+    interface UserDao  {
 
     @Query("SELECT * FROM user")
     fun getAll(): List<User>
@@ -114,7 +121,7 @@ interface UserDao  {
     fun insert(user: User)
 
     @Insert
-    fun insertAll(User... users)
+    fun insertAll(vararg users: User)
 
     @Update
     fun update(user: User)
@@ -122,6 +129,8 @@ interface UserDao  {
     @Delete
     fun delete(user: User): Int
 
+    @Query("SELECT * FROM user WHERE age > :arg0")
+    fun loadAllUsersOlderThan(minAge: Int): List<User>
 }
 ```
 
@@ -135,4 +144,26 @@ object : Thread() {
             var user = userDao?.findById(1)
         }
     }.start()
+```
+
+> Using live data to update UI
+
+```gradle
+compile "android.arch.lifecycle:runtime:1.0.0-alpha1"
+compile "android.arch.lifecycle:extensions:1.0.0-alpha1"
+```
+
+```java
+@Query("SELECT * FROM University")
+fun fetchAllData(): LiveData<List<University>>
+```
+
+```java
+var universityLiveData = sampleDatabase.daoAccess().fetchAllData();
+universityLiveData.observe(this, new Observer<List<University>>() {
+    @Override
+    public void onChanged(@Nullable List<University> universities) {
+       //Update your UI here.
+    }
+})
 ```
