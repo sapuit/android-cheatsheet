@@ -1,5 +1,6 @@
 # Library - Tutorial
 
+* [Animation](#animation)
 * [Design patterns](#design-patterns)
 * [Inspiration](#inspiration)
 * [Kotlin](#kotlin)
@@ -12,9 +13,21 @@
 * [UI](#ui)
 * [Other](#other)
 
+## Animation
+
+| Name | Describe |
+| - | - |
+| [Android physics based animation ](https://android.jlelse.eu/android-physics-based-animation-cf0cc125830f)| Explore what is physics based animation and how it is different from normal animation.
+|[Icon Animation Techniques](http://www.androiddesignpatterns.com/2016/11/introduction-to-icon-animation-techniques.html)|  Several different techniques that you can use to create beautiful icon animations.
+|[Learn Some New Moves](https://medium.com/@crafty/learn-some-new-moves-b8aad7828014)|
+|[Implementing Complex Animations in Android](https://proandroiddev.com/implementing-complex-animations-in-android-full-working-code-41979cc2369e)|
+|[Beautiful animations](https://robinhood.engineering/beautiful-animations-using-android-constraintlayout-eee5b72ecae3)|Beautiful animations using Android ConstraintLayout
+|[]()|
+|[]()|
+
 ## Design patterns
 
-| Name                                     | Describe                           |
+| Name | Describe |
 | - | ---------------------------------- |
 | [Design Patterns for Android](https://www.raywenderlich.com/109843/common-design-patterns-for-android) | Common Design Patterns for Android |
 
@@ -26,8 +39,8 @@
 | [inspired-ui]() | Endless list of beautiful UI design      |
 | [mobilepatterns](https://www.mobile-patterns.com/android) | Common screen patterns neatly organized  |
 | [pttrns](http://pttrns.com/android-patterns) | List of android screens in categories    |
-| [androidniceties](http://androidniceties.tumblr.com/) | Blog of beautiful interfaces             |
-| [androidux](http://androidux.com/)      | Explores common patterns for UX          |
+| [androidniceties](http://androidniceties.tumblr.com/) | Blog of beautiful interfaces |
+| [androidux](http://androidux.com/) | Explores common patterns for UX          |
 
 ## Kotlin
 
@@ -47,6 +60,9 @@
 | [Kotlin talk from Google I/O 2017](https://www.youtube.com/watch?v=fPzxfeDJDzY) | Life is Great and Everything Will Be Ok, Kotlin is Here |
 | [Using Mockito with Kotlin](http://trickyandroid.com/using-mockito-with-kotlin/) | Using Mockito with Kotlin |
 |[Design Patterns](https://github.com/dbacinski/Design-Patterns-In-Kotlin)|Design Patterns implemented in Kotlin |
+|[Android Notifications ](https://android.jlelse.eu/android-notifications-an-elegant-way-to-build-and-display-7771d65ba3a2)| An elegant way to build and display
+|[K4Kotlin](https://github.com/kirtan403/K4Kotlin)|A sweet, small set of Kotlin functions to reduce your android boilerplate code
+
     
 ## Media
 
@@ -68,6 +84,7 @@
 | - | - |
 | [Karchitec](https://github.com/msesma/Karchitec) | Kotlin RSS reader using Google android architecture components libraries |
 |[The Google I/O 2017 Android App](https://github.com/google/iosched)|This project is the Android app for the conference. The app supports devices running Android 5.0+, and is optimized for phones and tablets of all shapes and sizes.|
+|[Android Archive Library (AAR)](https://android.jlelse.eu/open-source-your-android-code-a-complete-guide-bf0032e50f0e)| Place code inside an Android Archive Library (AAR) — Step 1 of 6| 
 
 ## Plugin
 
