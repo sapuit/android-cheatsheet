@@ -85,6 +85,18 @@
 | [Karchitec](https://github.com/msesma/Karchitec) | Kotlin RSS reader using Google android architecture components libraries |
 |[The Google I/O 2017 Android App](https://github.com/google/iosched)|This project is the Android app for the conference. The app supports devices running Android 5.0+, and is optimized for phones and tablets of all shapes and sizes.|
 |[Android Archive Library (AAR)](https://android.jlelse.eu/open-source-your-android-code-a-complete-guide-bf0032e50f0e)| Place code inside an Android Archive Library (AAR) — Step 1 of 6| 
+|[Android App MVP Architecture](https://github.com/MindorksOpenSource/android-mvp-architecture)|This repository contains a detailed sample app that implements MVP architecture using Dagger2, GreenDao, RxJava2, Fast-Android-Networking and PlaceholderView.|
+|[Android App MVVM Architecture](https://github.com/MindorksOpenSource/android-mvvm-architecture)|This repository contains a detailed sample app that implements MVVM architecture using Dagger2, GreenDao, RxJava2, Fast-Android-Networking and PlaceholderView.|
+|[Google Android Architecture Blueprints](https://github.com/googlesamples/android-architecture)|Android Architecture Blueprints is meant to demonstrate possible ways to help with these common problems. |
+|[Telegram](https://github.com/DrKLO/Telegram)|Telegram is a messaging app with a focus on speed and security. It’s super fast, simple, and free. This repo contains the official source code for Telegram App for Android.|
+|[Plaid](https://github.com/nickbutcher/plaid)|An Android app which provides design news and inspiration, as well as being a great implementation of material design.|
+|[Wire](https://github.com/wireapp/wire-android)|This chat application is full of pictures, movies, GIFs, music, sketches, and other forms of media. It’s always private, and offers secure with end-to-end encryption.|
+|[ribot Android App](https://github.com/ribot/ribot-app-android)|The official ribot app for Android, which follows the architecture, tools, and guidelines the team espouses for building on the Android platform.|
+|[Kickstarter](https://github.com/kickstarter/android-oss)|Kickstarter is a global community that helps bring creative projects to life. Explore thousands of projects in art, design, film, games, music, and more, and pledge to your favorites right from the app.|
+|[PocketHub](https://github.com/pockethub/PocketHub)|GitHub didn’t want to maintain the app anymore, so it’s been released to the community and maintained as a public project. They are actively working towards a re-release this app to the Play Store. This app will be the spiritual successor to the original GitHub app.|
+|[ Android MVP Sample Application](https://github.com/amitshekhariitbhu/Android-MVP-Sample-Application)|A very simple app showing how to implement MVP architecture.|
+|[]()||
+|[]()|  
 
 ## Plugin
 
@@ -147,3 +159,5 @@
 |[30+ Bite-Sized Pro Tips to Become a Better Android Developer](https://blog.aritraroy.in/30-bite-sized-pro-tips-to-become-a-better-android-developer-b311fd641089)|some bite-sized pro tips from my experience to aid you in the journey|
 |[Android Development Best Practices](https://blog.mindorks.com/android-development-best-practices-83c94b027fd3)|Let’s explore some best practices in designing and developing Android apps.|
 |[Context In Android Application](https://blog.mindorks.com/understanding-context-in-android-application-330913e32514)|Understanding Context In Android Application|
+|[How To Become A Complete Android Developer](https://blog.mindorks.com/how-to-become-a-complete-android-developer-110d7ef91f2a)|A complete guide to become a complete Android Developer.|
+|[]()||

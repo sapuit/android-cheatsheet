@@ -1,4 +1,4 @@
-Retrieving data from API
+Network
 =========
 
 - [Using Rxjava + Retrofit](#using-rxjava-and-retrofit)
@@ -45,6 +45,7 @@ interface ApiClient {
 ```
 
 > ApiResult.kt
+
 ```java
 data class LoginResult(@SerializedName("data") val user: User,
                        @SerializedName("message") val message: String,

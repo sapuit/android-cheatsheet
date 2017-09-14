@@ -1,0 +1,19 @@
+Util
+============
+
+ - [Kotlin extension](kotlin-extension)
+
+## Kotlin Extension
+
+```kotlin
+fun <T : Collection<*>> T?.isNullOrEmpty(): Boolean
+        = this == null || this.isEmpty()
+
+fun thread(t: () -> Unit) {
+    object : Thread() {
+        override fun run() {
+            t()
+        }
+    }.start()
+}
+```

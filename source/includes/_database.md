@@ -37,11 +37,12 @@ abstract class AppDatabase : RoomDatabase() {
 
     companion object {
 
-        var INSTANCE: AppDatabase? = null
+        private var INSTANCE: AppDatabase? = null
 
         fun getAppDatabase(context: Context): AppDatabase? {
             if (INSTANCE == null)
-                INSTANCE = Room.databaseBuilder(context, AppDatabase::class.java, "db-app").build()
+                INSTANCE = Room.databaseBuilder(context, 
+                                AppDatabase::class.java, "db-app").build()
             return INSTANCE
         }
 
