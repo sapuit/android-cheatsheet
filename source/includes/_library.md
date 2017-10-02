@@ -74,9 +74,11 @@
 
 | Name | Describe |
 | - | - |
-| [retrofit-2](https://code.tutsplus.com/tutorials/getting-started-with-retrofit-2--cms-27792) | Started With Retrofit 2 HTTP Client.     |
+| [retrofit-2](https://code.tutsplus.com/tutorials/getting-started-with-retrofit-2--cms-27792) | Started With Retrofit 2 HTTP Client. |
 | [downloadmanager](https://blog.stylingandroid.com/downloadmanager-part-1/) | Download content to device, shared with other apps, or stored in a publicly accessible location on the device. |
 | [socket.io](http://socket.io/blog/native-socket-io-and-android/) | Communicaties with a socket.io nodejs server. |
+|[Downloading files using Download Manager in Android](http://www.gadgetsaint.com/android/download-manager/) | Downloading files using Download Manager in Android |
+|[]()||
 
 ## Project
 
@@ -96,7 +98,7 @@
 |[PocketHub](https://github.com/pockethub/PocketHub)|GitHub didn’t want to maintain the app anymore, so it’s been released to the community and maintained as a public project. They are actively working towards a re-release this app to the Play Store. This app will be the spiritual successor to the original GitHub app.|
 |[ Android MVP Sample Application](https://github.com/amitshekhariitbhu/Android-MVP-Sample-Application)|A very simple app showing how to implement MVP architecture.|
 |[]()||
-|[]()|  
+|[]()|| 
 
 ## Plugin
 
@@ -116,7 +118,7 @@
 | Name | Describe |
 | - | - |
 | [Custom file templates](https://riggaroo.co.za/custom-file-templates-android-studio/) | How to make your own File Templates in Android Studio |
-| [File templates](https://coderwall.com/p/fsxvyw/file-templates-in-android-studio) | File Templates in Android Studio         |
+| [File templates](https://coderwall.com/p/fsxvyw/file-templates-in-android-studio) | File Templates in Android Studio |
 | [Android ADT Template Format Document](http://www.i-programmer.info/professional-programmer/resources-and-tools/6845-android-adt-template-format-document.html) | Describes the format and syntax for Android code templates. |
 | [live-templates](https://github.com/keyboardsurfer/idea-live-templates) | A collection of useful live templates that you can use within your AndroidStudio or IntelliJ IDEA installation. |
 | [Custom Android Code Templates](https://robusttechhouse.com/tutorial-how-to-create-custom-android-code-templates/) | Tutorial How To Create Custom Android Code Templates |
