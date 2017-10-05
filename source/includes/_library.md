@@ -77,12 +77,9 @@
 | [retrofit-2](https://code.tutsplus.com/tutorials/getting-started-with-retrofit-2--cms-27792) | Started With Retrofit 2 HTTP Client. |
 | [downloadmanager](https://blog.stylingandroid.com/downloadmanager-part-1/) | Download content to device, shared with other apps, or stored in a publicly accessible location on the device. |
 | [socket.io](http://socket.io/blog/native-socket-io-and-android/) | Communicaties with a socket.io nodejs server. |
-<<<<<<< HEAD
 |[Downloading files using Download Manager in Android](http://www.gadgetsaint.com/android/download-manager/) | Downloading files using Download Manager in Android |
 |[]()||
-=======
 |[ Detect Internet Connection Status](https://www.androidhive.info/2012/07/android-detect-internet-connection-status/)| Detect Internet Connection Status |
->>>>>>> 6fe4ea7baca1ef89370b9b5c9b35ec8e9ee01cec
 
 ## Project
 
