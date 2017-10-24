@@ -144,6 +144,7 @@
 | [Downloadable Fonts](https://blog.stylingandroid.com/downloadable-fonts/) | Downloadable Fonts |
 | [Material Calendar View for Android](https://github.com/Applandeo/Material-Calendar-View) | Material Calendar View for Android <img src="https://cloud.githubusercontent.com/assets/2614225/26538163/e40730cc-4444-11e7-897d-ca45d7289a0f.png" width="200"/>|
 |[Spotlight](https://github.com/TakuSemba/Spotlight)| lights items for tutorials or walk-throughs <img src="https://github.com/TakuSemba/Spotlight/raw/master/arts/customTarget.gif" width="200"/> | 
+|[Badge](https://gist.github.com/eneim/55df01e092520a6d33a4)|A custom TabLayout with badge support for Tabs|
 
 ## Other
 
@@ -163,4 +164,5 @@
 |[Android Development Best Practices](https://blog.mindorks.com/android-development-best-practices-83c94b027fd3)|Let’s explore some best practices in designing and developing Android apps.|
 |[Context In Android Application](https://blog.mindorks.com/understanding-context-in-android-application-330913e32514)|Understanding Context In Android Application|
 |[How To Become A Complete Android Developer](https://blog.mindorks.com/how-to-become-a-complete-android-developer-110d7ef91f2a)|A complete guide to become a complete Android Developer.|
+|[40 Top  Android Libraries May — September 2017 For Android Developer Library GitHub](https://medium.com/@PongPloyAppDev/top-android-libraries-may-september-2017-for-android-developer-library-github-280859685963)||[40 Top ] Android Libraries May — September 2017 For Android Developer Library GitHub
 |[]()||
